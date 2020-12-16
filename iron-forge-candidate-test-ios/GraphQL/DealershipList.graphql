@@ -1,0 +1,6 @@
+query DealershipList {
+  dealerships {
+    id
+    name
+  }
+}
