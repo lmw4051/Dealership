@@ -22,6 +22,9 @@
 		10BF917F246C96FC00566933 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 10BF917E246C96FC00566933 /* README */; };
 		54F256B2258A289D00A78A4D /* Dealership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256B1258A289D00A78A4D /* Dealership.swift */; };
 		54F256B4258A407300A78A4D /* DealershipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256B3258A407300A78A4D /* DealershipDetailViewController.swift */; };
+		54F256BB258A47B400A78A4D /* DealershipDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */; };
+		54F256BE258A4B7C00A78A4D /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */; };
+		54F256C0258A55CF00A78A4D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256BF258A55CF00A78A4D /* Extensions.swift */; };
 		7FD4CB5B53CED24326F06F40 /* Pods_iron_forge_candidate_test_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		39277A81D4B762F9B7040744 /* Pods-iron-forge-candidate-test-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iron-forge-candidate-test-ios.debug.xcconfig"; path = "Target Support Files/Pods-iron-forge-candidate-test-ios/Pods-iron-forge-candidate-test-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		54F256B1258A289D00A78A4D /* Dealership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dealership.swift; path = ../../../../../../Dealership.swift; sourceTree = "<group>"; };
 		54F256B3258A407300A78A4D /* DealershipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DealershipDetailViewController.swift; path = ../../../../../../DealershipDetailViewController.swift; sourceTree = "<group>"; };
+		54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DealershipDetailCell.swift; path = ../../../../../../DealershipDetailCell.swift; sourceTree = "<group>"; };
+		54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "../../../../../../UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		54F256BF258A55CF00A78A4D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../../Extensions.swift; sourceTree = "<group>"; };
 		623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iron_forge_candidate_test_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7307C6C1E44EEDE27865AB5E /* Pods-template-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-template-ios-test.release.xcconfig"; path = "Target Support Files/Pods-template-ios-test/Pods-template-ios-test.release.xcconfig"; sourceTree = "<group>"; };
 		E259DC339941BB21792B9B24 /* Pods-template-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-template-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-template-ios-test/Pods-template-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 		10B15302246C81A000A22FFC /* iron-forge-candidate-test-ios */ = {
 			isa = PBXGroup;
 			children = (
+				54F256BC258A4B6A00A78A4D /* Helpers */,
 				10729941247328B200CF063C /* Resources */,
 				106CD222246C9024005B11B8 /* Globals */,
 				106CD21F246C8F67005B11B8 /* Generated */,
@@ -171,8 +178,18 @@
 		54F256B7258A45F300A78A4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		54F256BC258A4B6A00A78A4D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */,
+				54F256BF258A55CF00A78A4D /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A1C3BDF2DA2CF496BAAF4B7B /* Pods */ = {
@@ -325,8 +342,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B1531A246C827600A22FFC /* DealershipListViewController.swift in Sources */,
+				54F256BE258A4B7C00A78A4D /* UIView+AutoLayout.swift in Sources */,
+				54F256BB258A47B400A78A4D /* DealershipDetailCell.swift in Sources */,
 				54F256B2258A289D00A78A4D /* Dealership.swift in Sources */,
 				10B15304246C81A000A22FFC /* AppDelegate.swift in Sources */,
+				54F256C0258A55CF00A78A4D /* Extensions.swift in Sources */,
 				54F256B4258A407300A78A4D /* DealershipDetailViewController.swift in Sources */,
 				106CD221246C8FB5005B11B8 /* API.swift in Sources */,
 				10B15306246C81A000A22FFC /* SceneDelegate.swift in Sources */,

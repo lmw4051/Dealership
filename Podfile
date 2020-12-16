@@ -6,4 +6,5 @@ target 'iron-forge-candidate-test-ios' do
 
   pod 'Apollo'
   pod 'Kingfisher'
+#  pod 'SDWebImage', '~> 5.0'
 end

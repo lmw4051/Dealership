@@ -9,6 +9,7 @@
 import UIKit
 
 class DealershipListViewController: UIViewController {
+  // MARK: - Instance Properties
   @IBOutlet weak var tableView: UITableView!
   
   var dealerships: [Dealership] = [] {
@@ -17,6 +18,7 @@ class DealershipListViewController: UIViewController {
     }
   }
   
+  // MARK: - View Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
     self.tableView.dataSource = self
@@ -25,6 +27,7 @@ class DealershipListViewController: UIViewController {
     loadData()
   }
   
+  // MARK: - Helper Methods
   fileprivate func loadData() {
     Apollo.client.fetch(query: DealershipListQuery(), resultHandler: {
       guard let newDealerships = try? $0.get().data?.dealerships
@@ -47,6 +50,7 @@ class DealershipListViewController: UIViewController {
   }
 }
 
+// MARK: - UITableViewDataSource Methods
 extension DealershipListViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.dealerships.count
@@ -60,6 +64,7 @@ extension DealershipListViewController: UITableViewDataSource, UITableViewDelega
     return cell
   }
   
+  // MARK: - UITableViewDelegate Methods
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     tableView.deselectRow(at: indexPath, animated: true)
