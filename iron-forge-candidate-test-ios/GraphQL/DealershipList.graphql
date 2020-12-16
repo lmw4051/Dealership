@@ -2,5 +2,13 @@ query DealershipList {
   dealerships {
     id
     name
+    address
+    logoUrl
+    vehicles {      
+      name
+      address
+      imageUrl
+      priceCentsPerDay
+    }
   }
 }
