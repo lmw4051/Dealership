@@ -61,7 +61,11 @@ extension DealershipListViewController: UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    // Segue to dealership detail
-  }
-  
+    
+    tableView.deselectRow(at: indexPath, animated: true)
+    
+    let detailVC = DealershipDetailViewController()
+    detailVC.dealership = dealerships[indexPath.row]
+    navigationController?.pushViewController(detailVC, animated: true)
+  }  
 }
