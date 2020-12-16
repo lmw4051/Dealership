@@ -20,11 +20,11 @@
 		10B15310246C81A100A22FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B1530E246C81A100A22FFC /* LaunchScreen.storyboard */; };
 		10B1531A246C827600A22FFC /* DealershipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B15319246C827600A22FFC /* DealershipListViewController.swift */; };
 		10BF917F246C96FC00566933 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 10BF917E246C96FC00566933 /* README */; };
-		54F256B2258A289D00A78A4D /* Dealership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256B1258A289D00A78A4D /* Dealership.swift */; };
-		54F256B4258A407300A78A4D /* DealershipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256B3258A407300A78A4D /* DealershipDetailViewController.swift */; };
-		54F256BB258A47B400A78A4D /* DealershipDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */; };
-		54F256BE258A4B7C00A78A4D /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */; };
-		54F256C2258A6AEE00A78A4D /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F256C1258A6AEE00A78A4D /* BaseCell.swift */; };
+		541CD008258A7C5800D97DCF /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD007258A7C5800D97DCF /* BaseCell.swift */; };
+		541CD00A258A7C6B00D97DCF /* Dealership.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD009258A7C6B00D97DCF /* Dealership.swift */; };
+		541CD00C258A7C8F00D97DCF /* DealershipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD00B258A7C8F00D97DCF /* DealershipDetailViewController.swift */; };
+		541CD010258A7CAC00D97DCF /* DealershipDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD00F258A7CAC00D97DCF /* DealershipDetailCell.swift */; };
+		541CD014258A7CC600D97DCF /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD013258A7CC600D97DCF /* UIView+AutoLayout.swift */; };
 		7FD4CB5B53CED24326F06F40 /* Pods_iron_forge_candidate_test_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +46,11 @@
 		10BF917E246C96FC00566933 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		1FC85143B42A65C48B5E07FE /* Pods-iron-forge-candidate-test-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iron-forge-candidate-test-ios.release.xcconfig"; path = "Target Support Files/Pods-iron-forge-candidate-test-ios/Pods-iron-forge-candidate-test-ios.release.xcconfig"; sourceTree = "<group>"; };
 		39277A81D4B762F9B7040744 /* Pods-iron-forge-candidate-test-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iron-forge-candidate-test-ios.debug.xcconfig"; path = "Target Support Files/Pods-iron-forge-candidate-test-ios/Pods-iron-forge-candidate-test-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		54F256B1258A289D00A78A4D /* Dealership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dealership.swift; path = ../../../../../../Dealership.swift; sourceTree = "<group>"; };
-		54F256B3258A407300A78A4D /* DealershipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DealershipDetailViewController.swift; path = ../../../../../../DealershipDetailViewController.swift; sourceTree = "<group>"; };
-		54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DealershipDetailCell.swift; path = ../../../../../../DealershipDetailCell.swift; sourceTree = "<group>"; };
-		54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "../../../../../../UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		54F256C1258A6AEE00A78A4D /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseCell.swift; path = ../../../../../../BaseCell.swift; sourceTree = "<group>"; };
+		541CD007258A7C5800D97DCF /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		541CD009258A7C6B00D97DCF /* Dealership.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dealership.swift; sourceTree = "<group>"; };
+		541CD00B258A7C8F00D97DCF /* DealershipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealershipDetailViewController.swift; sourceTree = "<group>"; };
+		541CD00F258A7CAC00D97DCF /* DealershipDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealershipDetailCell.swift; sourceTree = "<group>"; };
+		541CD013258A7CC600D97DCF /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iron_forge_candidate_test_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7307C6C1E44EEDE27865AB5E /* Pods-template-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-template-ios-test.release.xcconfig"; path = "Target Support Files/Pods-template-ios-test/Pods-template-ios-test.release.xcconfig"; sourceTree = "<group>"; };
 		E259DC339941BB21792B9B24 /* Pods-template-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-template-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-template-ios-test/Pods-template-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				10B15319246C827600A22FFC /* DealershipListViewController.swift */,
-				54F256B3258A407300A78A4D /* DealershipDetailViewController.swift */,
+				541CD00B258A7C8F00D97DCF /* DealershipDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 		54F256B0258A288900A78A4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				54F256B1258A289D00A78A4D /* Dealership.swift */,
+				541CD009258A7C6B00D97DCF /* Dealership.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,8 +178,8 @@
 		54F256B7258A45F300A78A4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				54F256BA258A47B400A78A4D /* DealershipDetailCell.swift */,
-				54F256C1258A6AEE00A78A4D /* BaseCell.swift */,
+				541CD007258A7C5800D97DCF /* BaseCell.swift */,
+				541CD00F258A7CAC00D97DCF /* DealershipDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 		54F256BC258A4B6A00A78A4D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				54F256BD258A4B7C00A78A4D /* UIView+AutoLayout.swift */,
+				541CD013258A7CC600D97DCF /* UIView+AutoLayout.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -342,15 +342,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B1531A246C827600A22FFC /* DealershipListViewController.swift in Sources */,
-				54F256BE258A4B7C00A78A4D /* UIView+AutoLayout.swift in Sources */,
-				54F256BB258A47B400A78A4D /* DealershipDetailCell.swift in Sources */,
-				54F256B2258A289D00A78A4D /* Dealership.swift in Sources */,
+				541CD008258A7C5800D97DCF /* BaseCell.swift in Sources */,
 				10B15304246C81A000A22FFC /* AppDelegate.swift in Sources */,
-				54F256B4258A407300A78A4D /* DealershipDetailViewController.swift in Sources */,
 				106CD221246C8FB5005B11B8 /* API.swift in Sources */,
+				541CD010258A7CAC00D97DCF /* DealershipDetailCell.swift in Sources */,
 				10B15306246C81A000A22FFC /* SceneDelegate.swift in Sources */,
-				54F256C2258A6AEE00A78A4D /* BaseCell.swift in Sources */,
+				541CD00A258A7C6B00D97DCF /* Dealership.swift in Sources */,
 				106CD224246C902E005B11B8 /* ApolloService.swift in Sources */,
+				541CD014258A7CC600D97DCF /* UIView+AutoLayout.swift in Sources */,
+				541CD00C258A7C8F00D97DCF /* DealershipDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
