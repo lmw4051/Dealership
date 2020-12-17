@@ -23,6 +23,15 @@ class DealershipHeader: UICollectionReusableView {
     return iv
   }()
   
+  let guruContainerView: UIImageView = {
+    let iv = UIImageView()
+    iv.image = UIImage(named: "oval")
+    iv.heightAnchor.constraint(equalToConstant: 115).isActive = true
+    iv.layer.cornerRadius = iv.frame.size.width / 2
+    iv.clipsToBounds = true
+    return iv
+  }()
+  
   let guruImageView: UIImageView = {
     let iv = UIImageView()
     iv.image = UIImage(named: "GuruThumbnail")
@@ -59,9 +68,13 @@ class DealershipHeader: UICollectionReusableView {
     addSubview(headerImageView)
     headerImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
     
+    addSubview(guruContainerView)
+    guruContainerView.centerXInSuperview()
+    guruContainerView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 160, left: 0, bottom: 0, right: 0))
+    
     addSubview(guruImageView)
     guruImageView.centerXInSuperview()
-    guruImageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 173, left: 0, bottom: 0, right: 0))
+    guruImageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 173, left: 0, bottom: 0, right: 0))        
     
     addSubview(nameLabel)
     nameLabel.centerXInSuperview()
