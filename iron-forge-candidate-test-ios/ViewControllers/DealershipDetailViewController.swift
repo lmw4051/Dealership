@@ -60,4 +60,8 @@ extension DealershipDetailViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return .init(width: view.frame.width - 22 * 2, height: DealershipDetailViewController.cellSize)
   }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    return .init(width: view.frame.width, height: 358 + 31 + 29)
+  }
 }
