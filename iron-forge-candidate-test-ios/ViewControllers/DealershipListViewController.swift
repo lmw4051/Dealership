@@ -27,6 +27,12 @@ class DealershipListViewController: UIViewController {
     loadData()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.barStyle = .default
+    navigationController?.navigationBar.isHidden = false
+  }
+  
   // MARK: - Helper Methods
   fileprivate func loadData() {
     Apollo.client.fetch(query: DealershipListQuery(), resultHandler: {

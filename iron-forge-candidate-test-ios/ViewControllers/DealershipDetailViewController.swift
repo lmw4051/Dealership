@@ -12,13 +12,14 @@ class DealershipDetailViewController: UICollectionViewController {
   // MARK: - Instance Properties
   var dealership: Dealership? {
     didSet {
-      print("dealership", dealership)
+//      print("dealership", dealership)
       collectionView.reloadData()
     }
   }
   
   var vehicles: [Vehicle] = []
-  fileprivate let cellId = "CellId"
+  fileprivate let cellId = "cellId"
+  fileprivate let headerId = "headerId"
   
   static let cellSize: CGFloat = 309
   
@@ -33,12 +34,26 @@ class DealershipDetailViewController: UICollectionViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    collectionView.backgroundColor = .white
-    collectionView.register(DealershipDetailCell.self, forCellWithReuseIdentifier: cellId)
+    configureCollectionView()
     
     vehicles = dealership?.vehicles as! [Vehicle]
     print("")
     print(vehicles.count)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.navigationBar.barStyle = .black
+    navigationController?.navigationBar.isHidden = true
+  }
+  
+  // MARK: - Helper Methods
+  fileprivate func configureCollectionView() {
+    collectionView.backgroundColor = .white
+    collectionView.contentInsetAdjustmentBehavior = .never
+    
+    collectionView.register(DealershipDetailCell.self, forCellWithReuseIdentifier: cellId)
+    collectionView.register(DealershipHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
   }
 }
 
@@ -52,6 +67,12 @@ extension DealershipDetailViewController {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! DealershipDetailCell
     cell.vehicle = vehicles[indexPath.item]
     return cell
+  }
+  
+  override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! DealershipHeader
+    header.dealership = dealership
+    return header
   }
 }
 
