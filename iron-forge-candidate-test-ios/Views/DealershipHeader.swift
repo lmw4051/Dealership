@@ -46,7 +46,6 @@ class DealershipHeader: UICollectionReusableView {
     label.font = UIFont.init(name: "Inter-Bold", size: 24)
     label.textAlignment = .center
     label.numberOfLines = 1
-//    label.text = "Guru Recreations"
     label.textColor = .black
     label.heightAnchor.constraint(equalToConstant: 30).isActive = true
     return label
@@ -58,7 +57,6 @@ class DealershipHeader: UICollectionReusableView {
     label.textAlignment = .center
     label.numberOfLines = 2
     label.textColor = .black
-//    label.heightAnchor.constraint(equalToConstant: 30).isActive = true
     return label
   }()
   
@@ -86,7 +84,8 @@ class DealershipHeader: UICollectionReusableView {
     addressLabel.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 1, left: 20, bottom: 0, right: 20))
     
     addSubview(vehicleTypeView)
-    vehicleTypeView.anchor(top: addressLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 19, left: 0, bottom: 29, right: 0))
+    vehicleTypeView.anchor(top: addressLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 19, left: 0, bottom: 0, right: 0))
+    vehicleTypeView.constrainHeight(constant: 31)
   }
   
   required init?(coder: NSCoder) {
