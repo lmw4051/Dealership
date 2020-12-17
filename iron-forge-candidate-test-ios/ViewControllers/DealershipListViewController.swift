@@ -18,6 +18,8 @@ class DealershipListViewController: UIViewController {
     }
   }
   
+  var activityIndicatorView = UIActivityIndicatorView()
+  
   // MARK: - View Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -43,7 +45,13 @@ class DealershipListViewController: UIViewController {
   }
   
   fileprivate func loadData() {
-    Apollo.client.fetch(query: DealershipListQuery(), resultHandler: {
+    activityIndicatorView.startAnimating()
+    
+    Apollo.client.fetch(query: DealershipListQuery(), resultHandler: { [weak self] in
+      guard let self = self else { return }
+      
+      self.activityIndicatorView.stopAnimating()
+      
       guard let newDealerships = try? $0.get().data?.dealerships
         .map({ Dealership(
           id: $0.id,
@@ -86,5 +94,14 @@ extension DealershipListViewController: UITableViewDataSource, UITableViewDelega
     let detailVC = DealershipDetailViewController()
     detailVC.dealership = dealerships[indexPath.row]
     navigationController?.pushViewController(detailVC, animated: true)
-  }  
+  }
+  
+  func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    let footerView = UIView()
+    footerView.addSubview(activityIndicatorView)
+    activityIndicatorView.color = .lightGray
+    activityIndicatorView.fillSuperview()
+    activityIndicatorView.constrainHeight(constant: 24)
+    return footerView
+  }
 }

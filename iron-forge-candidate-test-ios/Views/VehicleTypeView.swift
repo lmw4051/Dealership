@@ -15,6 +15,7 @@ enum VehicleTypeOptions: Int, CaseIterable {
   case kayaks
   case boat
   case atv
+  case atv1
   
   var description: String {
     switch self {
@@ -24,6 +25,7 @@ enum VehicleTypeOptions: Int, CaseIterable {
     case .kayaks: return "KAYAKS"
     case .boat: return "BOAT"
     case .atv: return "ATV"
+      case .atv1: return "ATV1"
     }
   }
 }
@@ -33,11 +35,9 @@ class VehicleTypeView: UIView {
   lazy var collectionView: UICollectionView = {
     let layout = LeftAlignedCollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
-//    layout.itemSize = UICollectionViewFlowLayout.automaticSize
     layout.estimatedItemSize = .init(width: 40, height: 43)
     let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
     cv.backgroundColor = .white
-//    cv.delegate = self
     cv.dataSource = self
     return cv
   }()
@@ -45,15 +45,22 @@ class VehicleTypeView: UIView {
   fileprivate let cellId = "cellId"
   
   // MARK: - View Life Cycles
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
-    addSubview(collectionView)
-    collectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 20, bottom: 0, right: 20))
-    collectionView.register(VehicleTypeCell.self, forCellWithReuseIdentifier: cellId)
+    addSubview(collectionView)    
+    configureCollectionView()
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - Helper Methods
+  fileprivate func configureCollectionView() {
+    collectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 20, bottom: 0, right: 20))
+    collectionView.register(VehicleTypeCell.self, forCellWithReuseIdentifier: cellId)
+    collectionView.showsHorizontalScrollIndicator = false
   }
 }
 
