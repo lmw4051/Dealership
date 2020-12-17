@@ -62,6 +62,8 @@ class DealershipHeader: UICollectionReusableView {
     return label
   }()
   
+  let vehicleTypeView = VehicleTypeView()
+  
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -82,6 +84,9 @@ class DealershipHeader: UICollectionReusableView {
     
     addSubview(addressLabel)
     addressLabel.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 1, left: 20, bottom: 0, right: 20))
+    
+    addSubview(vehicleTypeView)
+    vehicleTypeView.anchor(top: addressLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 19, left: 0, bottom: 29, right: 0))
   }
   
   required init?(coder: NSCoder) {
