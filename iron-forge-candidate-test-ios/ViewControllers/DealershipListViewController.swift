@@ -21,8 +21,7 @@ class DealershipListViewController: UIViewController {
   // MARK: - View Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.dataSource = self
-    self.tableView.delegate = self
+    configureTableView()
     
     loadData()
   }
@@ -33,7 +32,16 @@ class DealershipListViewController: UIViewController {
     navigationController?.navigationBar.isHidden = false
   }
   
+  
   // MARK: - Helper Methods
+  fileprivate func configureTableView() {
+    tableView.dataSource = self
+    tableView.delegate = self
+    
+    navigationItem.title = "Dealership"
+    navigationController?.navigationBar.prefersLargeTitles = true
+  }
+  
   fileprivate func loadData() {
     Apollo.client.fetch(query: DealershipListQuery(), resultHandler: {
       guard let newDealerships = try? $0.get().data?.dealerships
