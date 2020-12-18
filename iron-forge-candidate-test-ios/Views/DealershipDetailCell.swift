@@ -13,7 +13,7 @@ class DealershipDetailCell: BaseCell {
   // MARK: - Instance Properties
   var vehicle: Vehicle! {
     didSet {
-      configureViews()
+      updateViews()
     }
   }
   
@@ -97,6 +97,15 @@ class DealershipDetailCell: BaseCell {
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
     super.init(frame: frame)
+    setupViews()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - Helper Methods
+  fileprivate func setupViews() {
     backgroundColor = .white
     
     addSubview(vehicleImageView)
@@ -124,13 +133,8 @@ class DealershipDetailCell: BaseCell {
     addSubview(nextPageButton)
     nextPageButton.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 21, right: 24))
   }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  // MARK: - Helper Methods
-  fileprivate func configureViews() {
+    
+  fileprivate func updateViews() {
     vehicleImageView.kf.setImage(with: URL(string: vehicle.imageUrl))
     priceLabel.text = "$\(vehicle.priceCentsPerDay)"
     

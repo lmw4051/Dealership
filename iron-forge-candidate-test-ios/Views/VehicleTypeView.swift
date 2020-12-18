@@ -46,7 +46,6 @@ class VehicleTypeView: UIView {
   fileprivate let cellId = "cellId"
   
   // MARK: - View Life Cycles
-  
   override init(frame: CGRect) {
     super.init(frame: frame)
     addSubview(collectionView)

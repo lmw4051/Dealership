@@ -12,7 +12,7 @@ class VehicleTypeCell: UICollectionViewCell {
   // MARK: - Instance Properties
   var option: VehicleTypeOptions! {
     didSet {
-      configureViews()
+      updateViews()
     }
   }
   
@@ -45,10 +45,7 @@ class VehicleTypeCell: UICollectionViewCell {
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = .white
-    
-    addSubview(vehicleTypeLabel)
-    vehicleTypeLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+    setupViews()
   }
   
   required init?(coder: NSCoder) {
@@ -56,7 +53,14 @@ class VehicleTypeCell: UICollectionViewCell {
   }
   
   // MARK: - Helper Methods
-  fileprivate func configureViews() {
+  fileprivate func setupViews() {
+    backgroundColor = .white
+    
+    addSubview(vehicleTypeLabel)
+    vehicleTypeLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+  }
+  
+  fileprivate func updateViews() {
     vehicleTypeLabel.text = option.description
     vehicleTypeLabel.addCharacterSpacing(kernValue: 2)
   }

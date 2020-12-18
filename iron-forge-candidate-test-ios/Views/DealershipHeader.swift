@@ -12,7 +12,7 @@ class DealershipHeader: UICollectionReusableView {
   // MARK: - Instance Properties
   var dealership: Dealership! {
     didSet {
-      configureViews()
+      updateViews()
     }
   }
   
@@ -64,7 +64,16 @@ class DealershipHeader: UICollectionReusableView {
   
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
-    super.init(frame: frame)    
+    super.init(frame: frame)
+    setupViews()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - Helper Methods
+  fileprivate func setupViews() {
     addSubview(headerImageView)
     headerImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
     
@@ -74,7 +83,7 @@ class DealershipHeader: UICollectionReusableView {
     
     addSubview(guruImageView)
     guruImageView.centerXInSuperview()
-    guruImageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 173, left: 0, bottom: 0, right: 0))        
+    guruImageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 173, left: 0, bottom: 0, right: 0))
     
     addSubview(nameLabel)
     nameLabel.centerXInSuperview()
@@ -87,13 +96,8 @@ class DealershipHeader: UICollectionReusableView {
     vehicleTypeView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
     vehicleTypeView.constrainHeight(constant: 31)
   }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  // MARK: - Helper Methods
-  func configureViews() {
+      
+  fileprivate func updateViews() {
     nameLabel.text = dealership.name    
     addressLabel.text = dealership.address
     

@@ -37,10 +37,7 @@ class BaseCell: UICollectionViewCell {
     
     self.backgroundView?.layer.shadowOpacity = 0.25
     self.backgroundView?.layer.shadowRadius = 10
-    self.backgroundView?.layer.shadowOffset = .init(width: 10, height: 10)
-    
-    // rasterizing the layer can improve the performance by not re-rendering the layer all the time. But it does this at the cost of memory (saving a rasterized image in memory).
-    // But, if you animate a change within the layer, the shouldRasterize can adversely affect performance (because it's going to re-rasterize the layer for each frame of the animation).
+    self.backgroundView?.layer.shadowOffset = .init(width: 10, height: 10)        
     self.backgroundView?.layer.shouldRasterize = true
   }
   
