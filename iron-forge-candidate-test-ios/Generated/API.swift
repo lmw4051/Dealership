@@ -19,7 +19,7 @@ public final class DealershipListQuery: GraphQLQuery {
           __typename
           type {
             __typename
-            name
+            displayName
           }
           name
           address
@@ -225,7 +225,7 @@ public final class DealershipListQuery: GraphQLQuery {
           public static var selections: [GraphQLSelection] {
             return [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-              GraphQLField("name", type: .nonNull(.scalar(String.self))),
+              GraphQLField("displayName", type: .nonNull(.scalar(String.self))),
             ]
           }
 
@@ -235,8 +235,8 @@ public final class DealershipListQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(name: String) {
-            self.init(unsafeResultMap: ["__typename": "VehicleType", "name": name])
+          public init(displayName: String) {
+            self.init(unsafeResultMap: ["__typename": "VehicleType", "displayName": displayName])
           }
 
           public var __typename: String {
@@ -248,12 +248,12 @@ public final class DealershipListQuery: GraphQLQuery {
             }
           }
 
-          public var name: String {
+          public var displayName: String {
             get {
-              return resultMap["name"]! as! String
+              return resultMap["displayName"]! as! String
             }
             set {
-              resultMap.updateValue(newValue, forKey: "name")
+              resultMap.updateValue(newValue, forKey: "displayName")
             }
           }
         }

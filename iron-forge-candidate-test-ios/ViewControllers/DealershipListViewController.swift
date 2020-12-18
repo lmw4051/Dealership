@@ -19,13 +19,12 @@ class DealershipListViewController: UIViewController {
     }
   }
   
-  var activityIndicatorView = UIActivityIndicatorView()
+  fileprivate var activityIndicatorView = UIActivityIndicatorView()
   
   // MARK: - View Life Cycles
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
-    
     loadData()
   }
   
@@ -34,7 +33,6 @@ class DealershipListViewController: UIViewController {
     navigationController?.navigationBar.barStyle = .default
     navigationController?.navigationBar.isHidden = false
   }
-  
   
   // MARK: - Helper Methods
   fileprivate func configureTableView() {
@@ -60,7 +58,7 @@ class DealershipListViewController: UIViewController {
           address: $0.address,
           logoUrl: $0.logoUrl,
           vehicles: $0.vehicles.map({ Vehicle(
-            type: $0.type.name,
+            type: $0.type.displayName,
             name: $0.name,
             address: $0.address,
             imageUrl: $0.imageUrl,

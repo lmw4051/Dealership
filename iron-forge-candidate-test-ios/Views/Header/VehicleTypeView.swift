@@ -20,10 +20,10 @@ enum VehicleTypeOptions: Int, CaseIterable {
     switch self {
     case .rv: return "RV"
     case .snowmobile: return "SNOWMOBILE"
-    case .jetski: return "JETSKI"
+    case .jetski: return "JET SKI"
     case .kayaks: return "KAYAKS"
     case .boat: return "BOAT"
-    case .atv: return "ATV"      
+    case .atv: return "All-terrain vehicle"      
     }
   }
 }

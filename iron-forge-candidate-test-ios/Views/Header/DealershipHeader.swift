@@ -19,7 +19,7 @@ class DealershipHeader: UICollectionReusableView {
   let headerImageView: UIImageView = {
     let iv = UIImageView()
     iv.image = UIImage(named: "rectangle")
-    iv.constrainWidth(constant: 214)
+    iv.constrainHeight(constant: 214)
     return iv
   }()
   
@@ -104,8 +104,13 @@ class DealershipHeader: UICollectionReusableView {
     var vehicleTypeDict = [VehicleTypeOptions: Bool]()
     
     for i in dealership.vehicles {
+      print("")
+      print(i.type)
+      
       for j in VehicleTypeOptions.allCases {
-        if j.description == i.type.uppercased() {
+        print("")
+        print(j.description)
+        if j.description.uppercased() == i.type.uppercased() {
           vehicleTypeDict[j] = true
         }
       }

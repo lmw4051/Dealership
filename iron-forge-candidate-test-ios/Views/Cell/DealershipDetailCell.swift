@@ -61,7 +61,6 @@ class DealershipDetailCell: BaseCell {
     label.font = UIFont.init(name: "Inter-Medium", size: 10)
     label.numberOfLines = 1
     label.textColor = .rgb(red: 243, green: 38, blue: 71)
-    label.constrainWidth(constant: 57)
     label.constrainHeight(constant: 12)
     return label
   }()
@@ -122,7 +121,7 @@ class DealershipDetailCell: BaseCell {
     dayLabel.anchor(top: priceView.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 31, left: 0, bottom: 0, right: 0))
     
     addSubview(vehicleTypeLabel)
-    vehicleTypeLabel.anchor(top: vehicleImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 18, left: 18, bottom: 0, right: 0))
+    vehicleTypeLabel.anchor(top: vehicleImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 18, left: 18, bottom: 0, right: 16))
     
     addSubview(vehicleNameLabel)
     vehicleNameLabel.anchor(top: vehicleTypeLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 7, left: 18, bottom: 0, right: 0))
@@ -138,7 +137,7 @@ class DealershipDetailCell: BaseCell {
     vehicleImageView.kf.setImage(with: URL(string: vehicle.imageUrl))
     priceLabel.text = "$\(vehicle.priceCentsPerDay)"
     
-    vehicleTypeLabel.text = vehicle.type.uppercased()
+    vehicleTypeLabel.text = vehicle.type
     vehicleTypeLabel.addCharacterSpacing(kernValue: 1.67)
     
     vehicleNameLabel.text = vehicle.name

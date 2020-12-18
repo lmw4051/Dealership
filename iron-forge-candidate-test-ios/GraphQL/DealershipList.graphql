@@ -6,7 +6,7 @@ query DealershipList {
     logoUrl
     vehicles {
       type {
-        name
+        displayName
       }
       name
       address
