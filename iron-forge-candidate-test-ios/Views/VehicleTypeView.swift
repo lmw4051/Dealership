@@ -20,7 +20,7 @@ enum VehicleTypeOptions: Int, CaseIterable {
     switch self {
     case .rv: return "RV"
     case .snowmobile: return "SNOWMOBILE"
-    case .jetski: return "JET SKI"
+    case .jetski: return "JETSKI"
     case .kayaks: return "KAYAKS"
     case .boat: return "BOAT"
     case .atv: return "ATV"      
@@ -28,7 +28,8 @@ enum VehicleTypeOptions: Int, CaseIterable {
   }
 }
 
-class VehicleTypeView: UIView {
+class VehicleTypeView: UIView {  
+  var vehicleTypeDict = [VehicleTypeOptions: Bool]()
   
   lazy var collectionView: UICollectionView = {
     let layout = LeftAlignedCollectionViewFlowLayout()
@@ -70,7 +71,9 @@ extension VehicleTypeView: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! VehicleTypeCell
-    cell.option = VehicleTypeOptions(rawValue: indexPath.row)
+    let option = VehicleTypeOptions(rawValue: indexPath.row)
+    cell.option = option
+    cell.vehicleTypeAvailable = vehicleTypeDict[option!] ?? false
     return cell
   }
 }

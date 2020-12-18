@@ -8,6 +8,14 @@
 
 import UIKit
 
+// MARK: - UIColor
+extension UIColor {
+  static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1)
+  }
+}
+
+// MARK: - UILabel
 extension UILabel {
   func addCharacterSpacing(kernValue: Double = 1.15) {
     if let labelText = text, labelText.count > 0 {

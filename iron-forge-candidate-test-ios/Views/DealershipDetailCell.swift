@@ -136,6 +136,7 @@ class DealershipDetailCell: BaseCell {
     
     vehicleTypeLabel.text = vehicle.type.uppercased()
     vehicleTypeLabel.addCharacterSpacing(kernValue: 1.67)
+    
     vehicleNameLabel.text = vehicle.name
     vehicleAddressLabel.text = vehicle.address
   }

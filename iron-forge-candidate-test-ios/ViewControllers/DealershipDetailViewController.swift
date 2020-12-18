@@ -17,6 +17,7 @@ class DealershipDetailViewController: UICollectionViewController {
   }
   
   var vehicles: [Vehicle] = []
+  
   fileprivate let cellId = "cellId"
   fileprivate let headerId = "headerId"
   

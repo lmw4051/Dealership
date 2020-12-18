@@ -96,5 +96,16 @@ class DealershipHeader: UICollectionReusableView {
   func configureViews() {
     nameLabel.text = dealership.name    
     addressLabel.text = dealership.address
+    
+    var vehicleTypeDict = [VehicleTypeOptions: Bool]()
+    
+    for i in dealership.vehicles {
+      for j in VehicleTypeOptions.allCases {
+        if j.description == i.type.uppercased() {
+          vehicleTypeDict[j] = true
+        }
+      }
+    }
+    vehicleTypeView.vehicleTypeDict = vehicleTypeDict    
   }
 }

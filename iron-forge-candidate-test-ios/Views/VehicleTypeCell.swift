@@ -9,9 +9,22 @@
 import UIKit
 
 class VehicleTypeCell: UICollectionViewCell {
+  // MARK: - Instance Properties
   var option: VehicleTypeOptions! {
     didSet {
       configureViews()
+    }
+  }
+  
+  var vehicleTypeAvailable: Bool = false {
+    didSet {
+      if vehicleTypeAvailable {
+        vehicleTypeLabel.textColor = .rgb(red: 220, green: 71, blue: 78)
+        vehicleTypeLabel.layer.borderColor = UIColor.rgb(red: 220, green: 71, blue: 78).cgColor
+      } else {
+        vehicleTypeLabel.textColor = .lightGray
+        vehicleTypeLabel.layer.borderColor = UIColor.lightGray.cgColor
+      }
     }
   }
   
@@ -20,14 +33,18 @@ class VehicleTypeCell: UICollectionViewCell {
     label.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 14)
     label.textAlignment = .center
     label.numberOfLines = 1
-    label.textColor = .rgb(red: 220, green: 71, blue: 78)
+//    label.textColor = .rgb(red: 220, green: 71, blue: 78)
+    label.textColor = .lightGray
     label.constrainHeight(constant: 31)
     label.layer.cornerRadius = 6
     label.layer.borderWidth = 0.5
-    label.layer.borderColor = UIColor.lightGray.cgColor    
+//    label.layer.borderColor = UIColor.rgb(red: 220, green: 71, blue: 78).cgColor
+    label.layer.borderColor = UIColor.lightGray.cgColor
     return label
   }()
   
+  
+  // MARK: - View Life Cycles
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = .white
