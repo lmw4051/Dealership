@@ -64,7 +64,7 @@ class DealershipHeader: UICollectionReusableView {
   
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
-    super.init(frame: frame)
+    super.init(frame: frame)    
     addSubview(headerImageView)
     headerImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor)
     
@@ -84,7 +84,7 @@ class DealershipHeader: UICollectionReusableView {
     addressLabel.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 1, left: 20, bottom: 0, right: 20))
     
     addSubview(vehicleTypeView)
-    vehicleTypeView.anchor(top: addressLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 19, left: 0, bottom: 0, right: 0))    
+    vehicleTypeView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
     vehicleTypeView.constrainHeight(constant: 31)
   }
   

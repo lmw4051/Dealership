@@ -36,7 +36,8 @@ class DealershipDetailViewController: UICollectionViewController {
     super.viewDidLoad()
     configureCollectionView()
     
-    vehicles = dealership?.vehicles as! [Vehicle]
+    guard let v = dealership?.vehicles else { return }
+    vehicles = v
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +82,10 @@ extension DealershipDetailViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    return .init(width: view.frame.width, height: 358 + 31 + 29)
+    return .init(width: view.frame.width, height: 358 + 31)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return .init(top: 29, left: 0, bottom: 32, right: 0)
   }
 }
