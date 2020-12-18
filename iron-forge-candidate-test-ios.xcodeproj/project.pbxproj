@@ -179,6 +179,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		541CD071258CE73000D97DCF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				541CD007258A7C5800D97DCF /* BaseCell.swift */,
+				541CD02F258B6BDB00D97DCF /* LeftAlignedCollectionViewFlowLayout.swift */,
+				541CD039258B863400D97DCF /* PaddingLabel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		541CD072258CE74800D97DCF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				541CD00F258A7CAC00D97DCF /* DealershipDetailCell.swift */,
+				541CD031258B6C4F00D97DCF /* VehicleTypeCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		541CD073258CE74F00D97DCF /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				541CD01F258B30E900D97DCF /* DealershipHeader.swift */,
+				541CD029258B52DE00D97DCF /* VehicleTypeView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		54F256B0258A288900A78A4D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,13 +218,9 @@
 		54F256B7258A45F300A78A4D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				541CD007258A7C5800D97DCF /* BaseCell.swift */,
-				541CD00F258A7CAC00D97DCF /* DealershipDetailCell.swift */,
-				541CD01F258B30E900D97DCF /* DealershipHeader.swift */,
-				541CD029258B52DE00D97DCF /* VehicleTypeView.swift */,
-				541CD031258B6C4F00D97DCF /* VehicleTypeCell.swift */,
-				541CD02F258B6BDB00D97DCF /* LeftAlignedCollectionViewFlowLayout.swift */,
-				541CD039258B863400D97DCF /* PaddingLabel.swift */,
+				541CD071258CE73000D97DCF /* Base */,
+				541CD072258CE74800D97DCF /* Cell */,
+				541CD073258CE74F00D97DCF /* Header */,
 			);
 			path = Views;
 			sourceTree = "<group>";
