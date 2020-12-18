@@ -104,12 +104,7 @@ class DealershipHeader: UICollectionReusableView {
     var vehicleTypeDict = [VehicleTypeOptions: Bool]()
     
     for i in dealership.vehicles {
-      print("")
-      print(i.type)
-      
-      for j in VehicleTypeOptions.allCases {
-        print("")
-        print(j.description)
+      for j in VehicleTypeOptions.allCases {        
         if j.description.uppercased() == i.type.uppercased() {
           vehicleTypeDict[j] = true
         }

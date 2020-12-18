@@ -38,6 +38,10 @@ class DealershipDetailViewController: UICollectionViewController {
     
     guard let v = dealership?.vehicles else { return }
     vehicles = v
+        
+    vehicles.sort { (v1, v2) -> Bool in
+      v1.name < v2.name
+    }        
   }
   
   override func viewWillAppear(_ animated: Bool) {

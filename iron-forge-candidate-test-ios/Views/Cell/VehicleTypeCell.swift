@@ -41,7 +41,6 @@ class VehicleTypeCell: UICollectionViewCell {
     return label
   }()
   
-  
   // MARK: - View Life Cycles
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -60,7 +59,7 @@ class VehicleTypeCell: UICollectionViewCell {
     vehicleTypeLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
   }
   
-  fileprivate func updateViews() {
+  fileprivate func updateViews() {    
     vehicleTypeLabel.text = option.description
     vehicleTypeLabel.addCharacterSpacing(kernValue: 2)
   }
