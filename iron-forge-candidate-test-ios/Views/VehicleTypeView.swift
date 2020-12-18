@@ -57,9 +57,11 @@ class VehicleTypeView: UIView {
   
   // MARK: - Helper Methods
   fileprivate func configureCollectionView() {
-    collectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 20, bottom: 0, right: 20))
     collectionView.register(VehicleTypeCell.self, forCellWithReuseIdentifier: cellId)
     collectionView.showsHorizontalScrollIndicator = false
+    
+    collectionView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+    collectionView.contentInset = .init(top: 0, left: 20, bottom: 0, right: 20)
   }
 }
 
