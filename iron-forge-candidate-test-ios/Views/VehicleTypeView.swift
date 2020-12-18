@@ -35,9 +35,11 @@ class VehicleTypeView: UIView {
     let layout = LeftAlignedCollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
     layout.estimatedItemSize = .init(width: 40, height: 43)
+    
     let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
     cv.backgroundColor = .white
     cv.dataSource = self
+    cv.delegate = self
     return cv
   }()
   
@@ -84,5 +86,5 @@ extension VehicleTypeView: UICollectionViewDataSource {
 extension VehicleTypeView: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return .init(width: frame.width, height: frame.height)
-  }    
+  }
 }
