@@ -62,13 +62,7 @@ class DealershipDetailCell: BaseCell {
     label.numberOfLines = 1
     label.textColor = .rgb(red: 243, green: 38, blue: 71)
     label.widthAnchor.constraint(equalToConstant: 57).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 12).isActive = true    
-    
-    // Letter Spacing
-//    let attributedString = label.attributedText as! NSMutableAttributedString
-//    attributedString.addAttribute(NSAttributedString.Key.kern, value: 1.67, range: NSMakeRange(0, attributedString.length))
-//    label.attributedText = attributedString
-    
+    label.heightAnchor.constraint(equalToConstant: 12).isActive = true
     return label
   }()
   
@@ -141,6 +135,7 @@ class DealershipDetailCell: BaseCell {
     priceLabel.text = "$\(vehicle.priceCentsPerDay)"
     
     vehicleTypeLabel.text = vehicle.type.uppercased()
+    vehicleTypeLabel.addCharacterSpacing(kernValue: 1.67)
     vehicleNameLabel.text = vehicle.name
     vehicleAddressLabel.text = vehicle.address
   }

@@ -47,7 +47,7 @@ class DealershipHeader: UICollectionReusableView {
     label.textAlignment = .center
     label.numberOfLines = 1
     label.textColor = .black
-    label.heightAnchor.constraint(equalToConstant: 30).isActive = true
+    label.heightAnchor.constraint(equalToConstant: 30).isActive = true   
     return label
   }()
   
@@ -94,7 +94,7 @@ class DealershipHeader: UICollectionReusableView {
   
   // MARK: - Helper Methods
   func configureViews() {
-    nameLabel.text = dealership.name
+    nameLabel.text = dealership.name    
     addressLabel.text = dealership.address
   }
 }

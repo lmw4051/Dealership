@@ -11,12 +11,12 @@ import UIKit
 class VehicleTypeCell: UICollectionViewCell {
   var option: VehicleTypeOptions! {
     didSet {
-      vehicleTypeLabel.text = option.description
+      configureViews()
     }
   }
   
   let vehicleTypeLabel: PaddingLabel = {
-    let label = PaddingLabel(withInsets: 6, 6, 10, 10)
+    let label = PaddingLabel(withInsets: 6, 6, 5, 5)
     label.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 14)
     label.textAlignment = .center
     label.numberOfLines = 1
@@ -38,5 +38,11 @@ class VehicleTypeCell: UICollectionViewCell {
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - Helper Methods
+  fileprivate func configureViews() {
+    vehicleTypeLabel.text = option.description
+    vehicleTypeLabel.addCharacterSpacing(kernValue: 2)
   }
 }
