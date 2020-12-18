@@ -20,14 +20,14 @@ class DealershipDetailCell: BaseCell {
   // MARK: - View Properties
   let vehicleImageView: UIImageView = {
     let iv = UIImageView()
-    iv.heightAnchor.constraint(equalToConstant: 179).isActive = true
+    iv.constrainHeight(constant: 179)
     return iv
   }()
   
   let priceView: UIView = {
     let v = UIView()
-    v.widthAnchor.constraint(equalToConstant: 62).isActive = true
-    v.heightAnchor.constraint(equalToConstant: 62).isActive = true
+    v.constrainWidth(constant: 62)
+    v.constrainHeight(constant: 62)
     v.backgroundColor = UIColor.rgb(red: 217, green: 57, blue: 64)
     return v
   }()
@@ -39,8 +39,8 @@ class DealershipDetailCell: BaseCell {
     label.adjustsFontSizeToFitWidth = true
     label.numberOfLines = 1
     label.textColor = .white
-    label.widthAnchor.constraint(equalToConstant: 40).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 27).isActive = true
+    label.constrainWidth(constant: 40)
+    label.constrainHeight(constant: 27)
     return label
   }()
   
@@ -51,8 +51,8 @@ class DealershipDetailCell: BaseCell {
     label.numberOfLines = 1
     label.text = "/day"
     label.textColor = .white
-    label.widthAnchor.constraint(equalToConstant: 25).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 22).isActive = true
+    label.constrainWidth(constant: 25)
+    label.constrainHeight(constant: 22)
     return label
   }()
   
@@ -61,8 +61,8 @@ class DealershipDetailCell: BaseCell {
     label.font = UIFont.init(name: "Inter-Medium", size: 10)
     label.numberOfLines = 1
     label.textColor = .rgb(red: 243, green: 38, blue: 71)
-    label.widthAnchor.constraint(equalToConstant: 57).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 12).isActive = true
+    label.constrainWidth(constant: 57)
+    label.constrainHeight(constant: 12)
     return label
   }()
   
@@ -71,8 +71,8 @@ class DealershipDetailCell: BaseCell {
     label.font = UIFont.init(name: "Inter-Bold", size: 18)
     label.numberOfLines = 2
     label.textColor = .black
-    label.widthAnchor.constraint(equalToConstant: 263).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    label.constrainWidth(constant: 263)
+    label.constrainHeight(constant: 50)
     return label
   }()
   
@@ -89,8 +89,8 @@ class DealershipDetailCell: BaseCell {
     let button = UIButton(type: .system)
     button.setImage(#imageLiteral(resourceName: "keyboardBackspace"), for: .normal)
     button.tintColor = .black
-    button.widthAnchor.constraint(equalToConstant: 18).isActive = true
-    button.heightAnchor.constraint(equalToConstant: 12).isActive = true
+    button.constrainWidth(constant: 18)
+    button.constrainHeight(constant: 12)
     return button
   }()
   

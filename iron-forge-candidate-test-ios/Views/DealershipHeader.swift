@@ -19,14 +19,14 @@ class DealershipHeader: UICollectionReusableView {
   let headerImageView: UIImageView = {
     let iv = UIImageView()
     iv.image = UIImage(named: "rectangle")
-    iv.heightAnchor.constraint(equalToConstant: 214).isActive = true
+    iv.constrainWidth(constant: 214)
     return iv
   }()
   
   let guruContainerView: UIImageView = {
     let iv = UIImageView()
     iv.image = UIImage(named: "oval")
-    iv.heightAnchor.constraint(equalToConstant: 115).isActive = true
+    iv.constrainHeight(constant: 115)
     iv.layer.cornerRadius = iv.frame.size.width / 2
     iv.clipsToBounds = true
     return iv
@@ -35,7 +35,7 @@ class DealershipHeader: UICollectionReusableView {
   let guruImageView: UIImageView = {
     let iv = UIImageView()
     iv.image = UIImage(named: "GuruThumbnail")
-    iv.heightAnchor.constraint(equalToConstant: 85).isActive = true
+    iv.constrainHeight(constant: 85)
     iv.layer.cornerRadius = iv.frame.size.width / 2
     iv.clipsToBounds = true
     return iv
@@ -47,7 +47,7 @@ class DealershipHeader: UICollectionReusableView {
     label.textAlignment = .center
     label.numberOfLines = 1
     label.textColor = .black
-    label.heightAnchor.constraint(equalToConstant: 30).isActive = true   
+    label.constrainHeight(constant: 30)
     return label
   }()
   
