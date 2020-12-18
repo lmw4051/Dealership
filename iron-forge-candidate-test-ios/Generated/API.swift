@@ -17,6 +17,10 @@ public final class DealershipListQuery: GraphQLQuery {
         logoUrl
         vehicles {
           __typename
+          type {
+            __typename
+            name
+          }
           name
           address
           imageUrl
@@ -143,6 +147,7 @@ public final class DealershipListQuery: GraphQLQuery {
         public static var selections: [GraphQLSelection] {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("type", type: .nonNull(.object(`Type`.selections))),
             GraphQLField("name", type: .nonNull(.scalar(String.self))),
             GraphQLField("address", type: .nonNull(.scalar(String.self))),
             GraphQLField("imageUrl", type: .nonNull(.scalar(String.self))),
@@ -156,8 +161,8 @@ public final class DealershipListQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(name: String, address: String, imageUrl: String, priceCentsPerDay: Int) {
-          self.init(unsafeResultMap: ["__typename": "Vehicle", "name": name, "address": address, "imageUrl": imageUrl, "priceCentsPerDay": priceCentsPerDay])
+        public init(type: `Type`, name: String, address: String, imageUrl: String, priceCentsPerDay: Int) {
+          self.init(unsafeResultMap: ["__typename": "Vehicle", "type": type.resultMap, "name": name, "address": address, "imageUrl": imageUrl, "priceCentsPerDay": priceCentsPerDay])
         }
 
         public var __typename: String {
@@ -166,6 +171,15 @@ public final class DealershipListQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var type: `Type` {
+          get {
+            return `Type`(unsafeResultMap: resultMap["type"]! as! ResultMap)
+          }
+          set {
+            resultMap.updateValue(newValue.resultMap, forKey: "type")
           }
         }
 
@@ -202,6 +216,45 @@ public final class DealershipListQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "priceCentsPerDay")
+          }
+        }
+
+        public struct `Type`: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["VehicleType"]
+
+          public static var selections: [GraphQLSelection] {
+            return [
+              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+              GraphQLField("name", type: .nonNull(.scalar(String.self))),
+            ]
+          }
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(name: String) {
+            self.init(unsafeResultMap: ["__typename": "VehicleType", "name": name])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var name: String {
+            get {
+              return resultMap["name"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "name")
+            }
           }
         }
       }

@@ -15,7 +15,6 @@ enum VehicleTypeOptions: Int, CaseIterable {
   case kayaks
   case boat
   case atv
-  case atv1
   
   var description: String {
     switch self {
@@ -24,8 +23,7 @@ enum VehicleTypeOptions: Int, CaseIterable {
     case .jetski: return "JET SKI"
     case .kayaks: return "KAYAKS"
     case .boat: return "BOAT"
-    case .atv: return "ATV"
-      case .atv1: return "ATV1"
+    case .atv: return "ATV"      
     }
   }
 }
@@ -48,7 +46,7 @@ class VehicleTypeView: UIView {
   
   override init(frame: CGRect) {
     super.init(frame: frame)
-    addSubview(collectionView)    
+    addSubview(collectionView)
     configureCollectionView()
   }
   

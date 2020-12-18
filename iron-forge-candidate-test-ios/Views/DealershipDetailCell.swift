@@ -60,10 +60,9 @@ class DealershipDetailCell: BaseCell {
     let label = UILabel()
     label.font = UIFont.init(name: "Inter-Medium", size: 10)
     label.numberOfLines = 1
-    label.text = "RV"
     label.textColor = .rgb(red: 243, green: 38, blue: 71)
     label.widthAnchor.constraint(equalToConstant: 57).isActive = true
-    label.heightAnchor.constraint(equalToConstant: 12).isActive = true
+    label.heightAnchor.constraint(equalToConstant: 12).isActive = true    
     
     // Letter Spacing
 //    let attributedString = label.attributedText as! NSMutableAttributedString
@@ -119,8 +118,6 @@ class DealershipDetailCell: BaseCell {
     dayLabel.centerXInSuperview()
     dayLabel.anchor(top: priceView.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 31, left: 0, bottom: 0, right: 0))
     
-//    dayLabel.anchor(top: priceView.topAnchor, leading: priceView.leadingAnchor, bottom: priceView.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 31, left: 19, bottom: 9, right: 18))
-    
     addSubview(vehicleTypeLabel)
     vehicleTypeLabel.anchor(top: vehicleImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 18, left: 18, bottom: 0, right: 0))
     
@@ -142,6 +139,8 @@ class DealershipDetailCell: BaseCell {
   fileprivate func configureViews() {
     vehicleImageView.kf.setImage(with: URL(string: vehicle.imageUrl))
     priceLabel.text = "$\(vehicle.priceCentsPerDay)"
+    
+    vehicleTypeLabel.text = vehicle.type.uppercased()
     vehicleNameLabel.text = vehicle.name
     vehicleAddressLabel.text = vehicle.address
   }

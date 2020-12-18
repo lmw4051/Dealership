@@ -12,7 +12,6 @@ class DealershipDetailViewController: UICollectionViewController {
   // MARK: - Instance Properties
   var dealership: Dealership? {
     didSet {
-//      print("dealership", dealership)
       collectionView.reloadData()
     }
   }
@@ -37,8 +36,6 @@ class DealershipDetailViewController: UICollectionViewController {
     configureCollectionView()
     
     vehicles = dealership?.vehicles as! [Vehicle]
-    print("")
-    print(vehicles.count)
   }
   
   override func viewWillAppear(_ animated: Bool) {

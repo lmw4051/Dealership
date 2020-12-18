@@ -17,15 +17,9 @@ struct Dealership {
 }
 
 struct Vehicle {
+  var type: String
   var name: String
   var address: String
   var imageUrl: String
-  var priceCentsPerDay: Int
-//  var type: VehicleType
+  var priceCentsPerDay: Int  
 }
-
-//struct VehicleType {
-//  var id: String
-//  var name: String
-//  var displayName: String
-//}

@@ -29,7 +29,6 @@
 		541CD02A258B52DE00D97DCF /* VehicleTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD029258B52DE00D97DCF /* VehicleTypeView.swift */; };
 		541CD030258B6BDB00D97DCF /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD02F258B6BDB00D97DCF /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		541CD032258B6C4F00D97DCF /* VehicleTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD031258B6C4F00D97DCF /* VehicleTypeCell.swift */; };
-		541CD036258B83C300D97DCF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD035258B83C300D97DCF /* Extension.swift */; };
 		541CD03A258B863400D97DCF /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541CD039258B863400D97DCF /* PaddingLabel.swift */; };
 		7FD4CB5B53CED24326F06F40 /* Pods_iron_forge_candidate_test_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +60,6 @@
 		541CD029258B52DE00D97DCF /* VehicleTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeView.swift; sourceTree = "<group>"; };
 		541CD02F258B6BDB00D97DCF /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		541CD031258B6C4F00D97DCF /* VehicleTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeCell.swift; sourceTree = "<group>"; };
-		541CD035258B83C300D97DCF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		541CD039258B863400D97DCF /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		623132BCAE243CEC8BF29A6F /* Pods_iron_forge_candidate_test_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iron_forge_candidate_test_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7307C6C1E44EEDE27865AB5E /* Pods-template-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-template-ios-test.release.xcconfig"; path = "Target Support Files/Pods-template-ios-test/Pods-template-ios-test.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,11 +134,11 @@
 		10B15302246C81A000A22FFC /* iron-forge-candidate-test-ios */ = {
 			isa = PBXGroup;
 			children = (
-				54F256BC258A4B6A00A78A4D /* Helpers */,
 				10729941247328B200CF063C /* Resources */,
-				106CD222246C9024005B11B8 /* Globals */,
 				106CD21F246C8F67005B11B8 /* Generated */,
+				106CD222246C9024005B11B8 /* Globals */,
 				10878EE0246C8865001F8C86 /* GraphQL */,
+				54F256BC258A4B6A00A78A4D /* Helpers */,
 				54F256B0258A288900A78A4D /* Models */,
 				54F256B7258A45F300A78A4D /* Views */,
 				10B15318246C820200A22FFC /* ViewControllers */,
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				541CD013258A7CC600D97DCF /* UIView+AutoLayout.swift */,
-				541CD035258B83C300D97DCF /* Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				541CD036258B83C300D97DCF /* Extension.swift in Sources */,
 				10B1531A246C827600A22FFC /* DealershipListViewController.swift in Sources */,
 				541CD008258A7C5800D97DCF /* BaseCell.swift in Sources */,
 				10B15304246C81A000A22FFC /* AppDelegate.swift in Sources */,

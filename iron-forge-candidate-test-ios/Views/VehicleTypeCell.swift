@@ -16,7 +16,7 @@ class VehicleTypeCell: UICollectionViewCell {
   }
   
   let vehicleTypeLabel: PaddingLabel = {
-    let label = PaddingLabel(withInsets: 6, 6, 5, 5)
+    let label = PaddingLabel(withInsets: 6, 6, 10, 10)
     label.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 14)
     label.textAlignment = .center
     label.numberOfLines = 1
@@ -24,7 +24,7 @@ class VehicleTypeCell: UICollectionViewCell {
     label.constrainHeight(constant: 31)
     label.layer.cornerRadius = 6
     label.layer.borderWidth = 0.5
-    label.layer.borderColor = UIColor.lightGray.cgColor
+    label.layer.borderColor = UIColor.lightGray.cgColor    
     return label
   }()
   

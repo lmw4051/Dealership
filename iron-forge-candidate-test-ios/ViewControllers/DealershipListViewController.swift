@@ -9,6 +9,7 @@
 import UIKit
 
 class DealershipListViewController: UIViewController {
+  
   // MARK: - Instance Properties
   @IBOutlet weak var tableView: UITableView!
   
@@ -44,7 +45,7 @@ class DealershipListViewController: UIViewController {
     navigationController?.navigationBar.prefersLargeTitles = true
   }
   
-  fileprivate func loadData() {
+  fileprivate func loadData() {    
     activityIndicatorView.startAnimating()
     
     Apollo.client.fetch(query: DealershipListQuery(), resultHandler: { [weak self] in
@@ -59,15 +60,15 @@ class DealershipListViewController: UIViewController {
           address: $0.address,
           logoUrl: $0.logoUrl,
           vehicles: $0.vehicles.map({ Vehicle(
+            type: $0.type.name,
             name: $0.name,
             address: $0.address,
             imageUrl: $0.imageUrl,
             priceCentsPerDay: $0.priceCentsPerDay) })) }) else {
           return
       }
-
+      
       self.dealerships = newDealerships
-      print(self.dealerships)
     })
   }
 }
@@ -101,7 +102,6 @@ extension DealershipListViewController: UITableViewDataSource, UITableViewDelega
     footerView.addSubview(activityIndicatorView)
     activityIndicatorView.color = .lightGray
     activityIndicatorView.fillSuperview()
-    activityIndicatorView.constrainHeight(constant: 24)
     return footerView
   }
 }

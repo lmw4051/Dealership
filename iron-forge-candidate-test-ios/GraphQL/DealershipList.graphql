@@ -4,7 +4,10 @@ query DealershipList {
     name
     address
     logoUrl
-    vehicles {      
+    vehicles {
+      type {
+        name
+      }
       name
       address
       imageUrl
