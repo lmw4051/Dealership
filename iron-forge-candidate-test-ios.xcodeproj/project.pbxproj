@@ -544,7 +544,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RNX3GY6LZ6;
+				DEVELOPMENT_TEAM = KFB5E3K2Z2;
 				INFOPLIST_FILE = "$(SRCROOT)/iron-forge-candidate-test-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -563,7 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RNX3GY6LZ6;
+				DEVELOPMENT_TEAM = KFB5E3K2Z2;
 				INFOPLIST_FILE = "$(SRCROOT)/iron-forge-candidate-test-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

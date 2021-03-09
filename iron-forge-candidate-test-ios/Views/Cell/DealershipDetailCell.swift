@@ -134,7 +134,7 @@ class DealershipDetailCell: BaseCell {
   }
     
   fileprivate func updateViews() {
-    vehicleImageView.kf.setImage(with: URL(string: vehicle.imageUrl))
+    vehicleImageView.kf.setImage(with: URL(string: vehicle.imageUrl), placeholder: UIImage.init(named: "placeholderImage"))
     priceLabel.text = "$\(vehicle.priceCentsPerDay)"
     
     vehicleTypeLabel.text = vehicle.type
